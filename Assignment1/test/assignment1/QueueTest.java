@@ -69,11 +69,14 @@ public class QueueTest {
     public void testWhenOrderDoesNotHaveTimeReceived () {
         
         Queue queue = new Queue();
-        
+        Order order = new Order("", "");
+        order.addOrder(new order("P0001", 50));
         orderQueue.add(order);
-         
-        long expResult = "the order does not have a time received";
-        long result = order.getTimeReceived().getTime();
+        String expResult = "Error neither customer ID nor customer name exists";
+        String result = order.addOrder(CustomerId,CustomerName);
+        assertEquals(expResult, result);
+      
+        
         
     }
     
