@@ -6,6 +6,7 @@
 
 package assignment1;
 
+import java.util.Date;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -43,5 +44,25 @@ public class QueueTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
+    
+    public void testWhenOrderDoesnotHaveTimeReceived() {
+        Queue orderQueue = new Queue();
+        String expResult = "Sorry! There is no Recieved Time.";
+        String result = orderQueue.fulfillOrder(customerID, timeRecieved, timeProcessed);
+        assertEquals(expResult, result);
+        
+       
+    }
+    
+    public void testWhenThereAreNoOrders() {
+        Order ord = new Order();
+        String expResult = "";
+        String result = ord..fulfillOrder(customerID, purchase);
+        assertEquals(expResult, result);
+        
+       
+    }
+    
+    
     
 }
