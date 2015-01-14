@@ -7,7 +7,7 @@ package assignment1;
 
 /**
  *
- * @author c0644881
+ * @author c0644696
  */
 public class Purchase {
 

@@ -48,6 +48,7 @@ public class QueueTest {
         
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
+    }
     public void testWhenOrderDoesNotHaveTimeReceived () {
         
         Queue queue = new Queue();
