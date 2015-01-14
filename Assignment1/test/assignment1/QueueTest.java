@@ -9,10 +9,10 @@ package assignment1;
 import java.util.Date;
 import org.junit.After;
 import org.junit.AfterClass;
+import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
  *
@@ -40,10 +40,57 @@ public class QueueTest {
     }
 
     @Test
-    public void testSomeMethod() {
+    public void testWhenNewOrderArrivesEitherCustomerIDorCustomerNameAndListOfPurchases() {
+        Queue Queue = new Queue();
+      
+       
+        
+        
+        
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
+    public void testWhenOrderIsAvailabele() {
+        long expected;
+        long result;
+        Date saved; 
+        Queue queue = new Queue();
+        Order order = new Order("C123456","Seatles limited");
+        order.addPurchase(new Purchase("P001", 50));
+        queue.add(order);
+        saved = order.getTimeReceived();
+        expected = saved.getTime();
+        Order order = new Order("C123457","Btles limited");
+        order.addPurchase(new Purchase("P011", 150));
+        queue.add(order);
+        Order proc = queue.element();
+        result = proc.getTimeReceived().getTime();
+        assertEquals(expected, result);
+    public void testWhenOrderDoesNotHaveTimeReceived () {
+        
+        Queue queue = new Queue();
+        
+        orderQueue.add(order);
+         
+        long expResult = "the order does not have a time received";
+        long result = order.getTimeReceived().getTime();
+        
+    }
+    
+    
+    public void testWhenOrderIsNotAvailabele(){
+        Order expected = null;
+        Queue queue = new Queue();
+        Order order = new Order();
+        Order proc = queue.element();
+        assertEquals(expected, proc);
+        
+    }
+            
+    
+   
+    
+
     
     public void testWhenOrderDoesnotHaveTimeReceived() {
         Queue orderQueue = new Queue();
