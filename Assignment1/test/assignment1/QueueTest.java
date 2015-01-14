@@ -56,6 +56,14 @@ public class QueueTest {
         Order proc = queue.element();
         result = proc.getTimeReceived().getTime();
         assertEquals(expected, result);
+    public void testWhenOrderDoesNotHaveTimeReceived () {
+        
+        Queue queue = new Queue();
+        
+        orderQueue.add(order);
+         
+        long expResult = "the order does not have a time received";
+        long result = order.getTimeReceived().getTime();
         
     }
     
@@ -72,5 +80,6 @@ public class QueueTest {
     
    
     
+
     
 }
