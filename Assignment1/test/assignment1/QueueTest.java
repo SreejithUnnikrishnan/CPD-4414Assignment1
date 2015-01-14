@@ -40,7 +40,6 @@ public class QueueTest {
     }
 
     @Test
-    public void testWhenNeitherCustomerIdNorCustomerNameExists () {
     public void testWhenNewOrderArrivesEitherCustomerIDorCustomerNameAndListOfPurchases() {
         Queue Queue = new Queue();
       
